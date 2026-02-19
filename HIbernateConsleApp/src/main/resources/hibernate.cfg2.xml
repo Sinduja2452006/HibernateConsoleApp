@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="hibernate.connection.driver_class">
+            oracle.jdbc.OracleDriver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:oracle:thin:@localhost:1521/XEPDB1
+        </property>
+
+        <property name="hibernate.connection.username">
+            system
+        </property>
+
+        <property name="hibernate.connection.password">
+          717823f253
+        </property>
+
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.OracleDialect
+        </property>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+
+        <mapping class="com.hostel.bean.Room"/>
+        <mapping class="com.hostel.bean.Allocation"/>
+
+    </session-factory>
+</hibernate-configuration>

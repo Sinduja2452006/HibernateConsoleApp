@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Oracle Dialect -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.OracleDialect
+        </property>
+
+        <!-- Oracle Driver -->
+        <property name="hibernate.connection.driver_class">
+            oracle.jdbc.OracleDriver
+        </property>
+
+        <!-- Oracle XE Connection URL -->
+        <property name="hibernate.connection.url">
+           jdbc:oracle:thin:@localhost:1521/XEPDB1
+
+        </property>
+
+        <!-- Oracle Username -->
+        <property name="hibernate.connection.username">
+            system
+        </property>
+
+        <!-- Oracle Password -->
+        <property name="hibernate.connection.password">
+            717823f253
+        </property>
+
+        <!-- Hibernate Settings -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Entity Mapping -->
+        <mapping class="com.kce.entity.Product"/>
+
+    </session-factory>
+</hibernate-configuration>
